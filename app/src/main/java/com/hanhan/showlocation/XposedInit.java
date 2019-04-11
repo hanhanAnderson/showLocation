@@ -30,12 +30,21 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class XposedInit implements IXposedHookLoadPackage{
     String packageName = "com.hanhan.showlocation";
     String className = "com.hanhan.showlocation.MainActivity";
+
+    String SMSPACKAGENAME = "com.android.mms";
+    String SMSclassName = "com.android.internal.telephony.gsm.SmsMessage$PduParser";
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
         Log.d("Xdbug:::::","handleLoadPackage");
 
-//        Class clazz =  loadPackageParam.classLoader.loadClass(className);
-        Log.d("Xdbug:::::::CLAZZZZZZ","$CLAZZ");
+//        Class clazz =  loadPackageParam.class.Loader.loadClass(className);
+         //Check class Name
+//        if (lpparam.appInfo != null && lpparam.isFirstApplication
+//                && (SMSPACKAGENAME.equals(lpparam.packageName)))
+
+        if (!lpparam.packageName.equals(packageName)) {
+            return;
+        }
         XposedHelpers.findAndHookMethod(className, lpparam.classLoader, "getLat",Location.class ,new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
@@ -67,10 +76,20 @@ public class XposedInit implements IXposedHookLoadPackage{
 //                return null;
 //            }
             @Override
-            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+            protected void afterHookedMethod
+            (MethodHookParam param) throws Throwable {
                 Object temp = param.getResult();
                 Log.d("Xdbug:LON:temp::",temp.toString());
+                
+                // Add random number -5.0 to 5.0
                 param.setResult((double) temp + (Math.random()-0.5)*10);
+
+
+                //Shifting
+                //param.setResult((double) temp + 0.5);
+
+                //ZipCode level accurate
+                //param.setResult((double) temp + (Math.random()*0.01);
 
             }
         });

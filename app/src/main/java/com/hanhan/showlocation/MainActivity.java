@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
                 +"Time" + location.getTime();
         testView.setText(locationStr);
     }
+    // For easier Hooking, use seperated method.
     private double getLat(Location location){
         if(location != null)
             return location.getLatitude();
@@ -102,6 +103,9 @@ public class MainActivity extends Activity {
 //            showLocation(location);
             String locationStr = "Lat：" + getLat(location) +"\n"
                     + "Lon：" + getLon(location) + "\n"
+                    + "Accu: "+location.getAccuracy() +"\n"
+                    + "Provider: " + location.getProvider() +"\n"
+                    + "Bearing: " +location.getBearing() +"\n"
                     +"Time" + location.getTime();
             testView.setText(locationStr);
         }
