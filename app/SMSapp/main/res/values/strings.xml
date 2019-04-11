@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">READ SMS demo</string>
+    <string name="mess">分公的斐</string>
+    <string name="dialog">识别到疑似垃圾短信！识别到疑似垃圾短信！识别到疑似垃圾短信！识别到疑似垃圾短信！识别到疑似垃圾短信！</string>
+</resources>
