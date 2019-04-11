@@ -9,6 +9,10 @@
 
   - report an obscure location to your apps
 
+Notification when SMS is read
+![image](https://user-images.githubusercontent.com/33920615/55924728-09aeeb00-5bd9-11e9-94c3-767dd1fd8fbd.png)
+
+
 Factory SMS
 ![Screenshot_2019-04-10-20-51-02](https://user-images.githubusercontent.com/33920615/55923221-81c5e280-5bd2-11e9-8ee4-ec411e6f0b60.png)
 Before 
