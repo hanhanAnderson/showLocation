@@ -64,13 +64,18 @@ public class XposedInit implements IXposedHookLoadPackage{
                     Log.d("Xdbug::SMSlist Map::",m.toString());
 
 
+                    //Putting original message
+					if (m.get("Sender")!= null) m.put("Sender",m.get("Sender").toString());
+                    if (m.get("Message")!= null) m.put("Message", m.get("Message").toString());
+
+
                     //Putting hashcode instead
                     if (m.get("Sender")!= null) m.put("Sender",m.get("Sender").toString().hashCode());
                     if (m.get("Message")!= null) m.put("Message", m.get("Message").toString().hashCode());
 
                     //putting first 5 letters
-                    //if (m.get("Sender")!= null) m.put("Sender",m.get("Sender").toString().substring(5));
-                    //if (m.get("Message")!= null) m.put("Message", m.get("Message").toString().substring(5));
+                    if (m.get("Sender")!= null) m.put("Sender",m.get("Sender").toString().substring(5));
+                    if (m.get("Message")!= null) m.put("Message", m.get("Message").toString().substring(5));
                 }
 
 //                List list = (List) field.get(param.thisObject);
