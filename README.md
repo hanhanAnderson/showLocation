@@ -9,6 +9,10 @@
 
   - report an obscure location to your apps
 
+Notification when SMS is read
+![image](https://user-images.githubusercontent.com/33920615/55924728-09aeeb00-5bd9-11e9-94c3-767dd1fd8fbd.png)
+
+
 Factory SMS
 ![Screenshot_2019-04-10-20-51-02](https://user-images.githubusercontent.com/33920615/55923221-81c5e280-5bd2-11e9-8ee4-ec411e6f0b60.png)
 Before 
@@ -16,3 +20,9 @@ Before
 After (Using HashCode)
 ![Screenshot_2019-04-10-20-47-21](https://user-images.githubusercontent.com/33920615/55923237-9904d000-5bd2-11e9-8d51-d47070275b6b.png)
 
+
+
+GeoLocation Options:
+![image](https://user-images.githubusercontent.com/33920615/55924856-7aee9e00-5bd9-11e9-929f-e2d7c41d0394.png)
+SMS Options:
+![image](https://user-images.githubusercontent.com/33920615/55924890-9659a900-5bd9-11e9-8718-6aad3c10e7cd.png)
