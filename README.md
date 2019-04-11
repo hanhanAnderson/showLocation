@@ -23,6 +23,8 @@ After (Using HashCode)
 
 
 GeoLocation Options:
+
 ![image](https://user-images.githubusercontent.com/33920615/55924856-7aee9e00-5bd9-11e9-929f-e2d7c41d0394.png)
 SMS Options:
+
 ![image](https://user-images.githubusercontent.com/33920615/55924890-9659a900-5bd9-11e9-8718-6aad3c10e7cd.png)
