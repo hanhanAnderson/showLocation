@@ -28,3 +28,9 @@ GeoLocation Options:
 SMS Options:
 
 ![image](https://user-images.githubusercontent.com/33920615/55924890-9659a900-5bd9-11e9-8718-6aad3c10e7cd.png)
+
+Normal Route:
+![Capture](https://user-images.githubusercontent.com/33920615/56236009-a1d42680-6056-11e9-96e5-f35b9207ce57.PNG)
+
+Modified Route:
+![Capture2](https://user-images.githubusercontent.com/33920615/56236007-a1d42680-6056-11e9-8b28-72302e9e4a49.PNG)
