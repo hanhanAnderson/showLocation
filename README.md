@@ -34,3 +34,7 @@ Normal Route:
 
 Modified Route:
 ![Capture2](https://user-images.githubusercontent.com/33920615/56236007-a1d42680-6056-11e9-8b28-72302e9e4a49.PNG)
+
+
+Settings:
+![image](https://user-images.githubusercontent.com/33920615/56371991-25635400-61cc-11e9-9e37-ac0ed1c4d57b.png)
