@@ -34,6 +34,12 @@ Normal Route:
 
 Modified Route:
 ![Capture2](https://user-images.githubusercontent.com/33920615/56236007-a1d42680-6056-11e9-8b28-72302e9e4a49.PNG)
+![image](https://user-images.githubusercontent.com/33920615/56372353-cf42e080-61cc-11e9-9abb-68b56b0bef23.png)
+![image](https://user-images.githubusercontent.com/33920615/56372379-db2ea280-61cc-11e9-894a-f4b7c174159b.png)
+
+
+App Selection:
+![image](https://user-images.githubusercontent.com/33920615/56372298-b89c8980-61cc-11e9-907f-b48d89dd2df7.png)
 
 
 Settings:
