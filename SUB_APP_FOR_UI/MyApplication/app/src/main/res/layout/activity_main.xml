@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_Submit"
             android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:text="Submit" />
@@ -27,31 +27,31 @@
             android:text="App Reading GeoLocation:" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBox_GeoEnable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enabled" />
 
          <RadioGroup
-             android:id="@+id/radioGroup"
+             android:id="@+id/Geo_radioGroup"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:orientation="horizontal">
              <RadioButton
-                 android:id="@+id/radioButton"
+                 android:id="@+id/radioButton_ZipCode"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:text="ZipCode"
                  android:checked="true" />
 
              <RadioButton
-                 android:id="@+id/radioButton3"
+                 android:id="@+id/radioButton_Shifted"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="Shifited" />
+                 android:text="Shifted" />
 
              <RadioButton
-                 android:id="@+id/radioButton2"
+                 android:id="@+id/radioButton_Random"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:text="Random" />
@@ -69,19 +69,19 @@
             android:checked="true"/>
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/checkBox_SMSEnable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enabled" />
 
         <RadioGroup
-            android:id="@+id/radioGroup2"
+            android:id="@+id/SMS_radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/radioButton_Original"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
@@ -89,13 +89,13 @@
 
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/radioButton_Mes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Random Message" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/radioButton_Both"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Random Sender + Message" />
