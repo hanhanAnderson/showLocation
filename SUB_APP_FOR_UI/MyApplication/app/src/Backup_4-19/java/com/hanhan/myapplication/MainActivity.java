@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "Current choice:::" + GeoChoice, Toast.LENGTH_LONG).show();
                 Log.i("SeekBar","Curr is:"+ GeoChoice);
 
-                if(GeoChoice.equals("ZipCode")) {mode = 0; para[0] = 0;}
+                if(GeoChoice.equals("ZipCode")) {mode = 1; para[0] = 0;}
                 if(GeoChoice.equals("Random")) {mode = 1; para[0] = 1; }
                 if(GeoChoice.equals("Shifted")) {mode = 2; para[0] = 2;}
 //                switch(GeoChoice) {
