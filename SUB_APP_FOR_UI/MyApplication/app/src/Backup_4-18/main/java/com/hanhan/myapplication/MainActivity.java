@@ -1,6 +1,5 @@
 package com.hanhan.myapplication;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -22,11 +21,8 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup geoGroup;
     String GeoChoice;
     private SeekBar seekBar;
+    private static Context mContext;
 
-    private SharedPreferences sp;
-    private SharedPreferences.Editor editor;
-
-    Context mContext;
     static String className = "com.hanhan.myapplication";
 
     static Integer para[] = new Integer[]{0, 50};
@@ -38,15 +34,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = this;
         setContentView(R.layout.activity_main);
 
 
-        sp = getSharedPreferences("para", Activity.MODE_WORLD_READABLE);
-        editor = sp.edit();
-        editor.putInt("prog",1);
-        editor.putInt("mode", 0);
-//        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences sharedPreferences = getSharedPreferences("prog", Context.MODE_PRIVATE);
+
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
         mContext = this;
@@ -57,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("SeekBar","Curr is:"+ progress);
                 prog = progress;
                 para[1] = progress;
-
             }
 
             @Override
@@ -69,11 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
 //                SharedPreferencesUtils.setParam(MainActivity.this, "int", prog);
 //                editor.putInt("prog", prog);
-//                Log.i("notXdbug:Para:",para[0].toString()+"  "+para[1].toString());
-                editor.putInt("prog",prog);
-                editor.commit();
-
-                Log.i("sp Edit:",Integer.toString(sp.getInt("prog",-1)));
+                Log.i("notXdbug:Para:",para[0].toString()+"  "+para[1].toString());
             }
         });
 
@@ -86,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "Current choice:::" + GeoChoice, Toast.LENGTH_LONG).show();
                 Log.i("SeekBar","Curr is:"+ GeoChoice);
 
-                if(GeoChoice.equals("ZipCode")) {mode = 1; para[0] = 0;}
+                if(GeoChoice.equals("ZipCode")) {mode = 1; para[0] = 1;}
                 if(GeoChoice.equals("Random")) {mode = 1; para[0] = 1; }
                 if(GeoChoice.equals("Shifted")) {mode = 2; para[0] = 2;}
 //                switch(GeoChoice) {
@@ -95,10 +83,7 @@ public class MainActivity extends AppCompatActivity {
 //                    case "Shifted" : mode = 2;
 //                    default: mode = 0;
 //                }
-                editor.putInt("mode", mode);
-                editor.commit();
                 Log.i("SeekBar","Curr mode is:"+ mode);
-                Log.i("Sp edit mode:", Integer.toString(sp.getInt("mode",-1)));
 
 
             }

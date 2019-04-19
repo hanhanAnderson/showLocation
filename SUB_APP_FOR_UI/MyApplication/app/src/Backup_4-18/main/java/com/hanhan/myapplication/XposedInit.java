@@ -26,7 +26,6 @@ import de.robv.android.xposed.IXposedHookInitPackageResources;
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XC_MethodReplacement;
-import de.robv.android.xposed.XSharedPreferences;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_InitPackageResources;
@@ -37,7 +36,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class XposedInit implements IXposedHookLoadPackage {
     String packageName = "com.hanhan.maptest";
     String className = "com.hanhan.maptest.MapsActivity";
-//    private SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
 
 
 //    private static SharedPreferences getPrefs(Context context) {
@@ -51,7 +50,6 @@ public class XposedInit implements IXposedHookLoadPackage {
 
     Integer mode = 1;
     Integer prog = 50;
-
 //    Integer para[] = new Integer[]{0, 50};
 //    case "ZipCode": mode = 0;
 //    case "Random" : mode = 1;
@@ -82,26 +80,15 @@ public class XposedInit implements IXposedHookLoadPackage {
 //            }
             @Override
             protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                super.afterHookedMethod(param);
-
-                XSharedPreferences pre = new XSharedPreferences("com.hanhan.myapplication","para");
-                prog = pre.getInt("prog",0);
-                mode = pre.getInt("mode", 0);
-                Log.i("XSp::prog",Integer.toString(prog));
-
-
                 Object temp = param.getResult();
                 double newLat = 0.0;
-
-//                Integer para[] = MainActivity.getPara();
-//                prog = para[0];
-//                Log.i("Xdbug:Para:",para[0].toString()+"  "+para[1].toString());
-//                mode = para[1];
+                Integer para[] = MainActivity.getPara();
+                prog = para[0];
+                Log.i("Xdbug:Para:",para[0].toString()+"  "+para[1].toString());
+                mode = para[1];
 
 //                prog = (int) SharedPreferencesUtils.getParam(MainActivity.getActivity(),"int", 0);
 //                sharedPreferences.getInt("prog", 0);
-
-
                 Log.d("Xdbug:AfHookLAT:PROG::", Integer.toString(prog));
                 switch (mode) {
                     case 0 : newLat = (double) temp + (Math.random() - 0.5) * 0.003 * prog; break;// ZipCode (0-4.5km)
