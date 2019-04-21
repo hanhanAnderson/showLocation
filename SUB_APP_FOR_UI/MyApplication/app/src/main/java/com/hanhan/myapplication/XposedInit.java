@@ -12,6 +12,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +38,10 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class XposedInit implements IXposedHookLoadPackage {
     String packageName = "com.hanhan.maptest";
     String className = "com.hanhan.maptest.MapsActivity";
+    Time time = new Time();
 
+    long prev = time.toMillis(false);
+    long curr = 0;
     String demoPackage = "com.hanhan.showlocation";
 //  private SharedPreferences sharedPreferences;
 
@@ -53,7 +57,9 @@ public class XposedInit implements IXposedHookLoadPackage {
 
     Integer mode = 1;
     Integer prog = 50;
-
+    Integer oldProg = 0;
+    double lonRan = 0.0;
+    double latRan = 0.0;
 
 //    case "ZipCode": mode = 0;
 //    case "Random" : mode = 1;
@@ -100,14 +106,86 @@ public class XposedInit implements IXposedHookLoadPackage {
             XposedHelpers.findAndHookMethod("android.location.Location", lpparam.classLoader, "getLatitude", new XC_MethodHook(){
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                    param.setResult(47.6398481);
+                    super.afterHookedMethod(param);
+
+                    XSharedPreferences pre = new XSharedPreferences("com.hanhan.myapplication","para");
+                    prog = pre.getInt("prog",0);
+                    mode = pre.getInt("mode", 0);
+
+
+                    Object temp = param.getResult();
+
+//
+//                    time.setToNow();
+//
+//                    curr = time.toMillis(false);
+//                    Log.i("Xdbug time",Long.toString(curr));z
+//                    Log.i("Xdbug time",Long.toString(prev));
+//
+
+//                    if(newLat != 0.0 && mode != 2 && curr - prev < 1000*5) {
+//                        Log.i("Xdbug time", "less than 5 sec!!");
+////                        param.setResult(newLat == 0.0 ? null : newLat);
+//                        param.setResult(newLat);
+//                        return;
+//                    }
+//
+//                    prev = curr;
+
+
+
+
+
+                    double newLat = 0.0;
+//                    Log.d("Xdbug:AfHookLAT:PROG::", Integer.toString(prog));
+
+                    if (oldProg != prog) {
+                        Log.d("Xdbug::oldProg", "oldPrg != prog");
+                        oldProg = prog;
+                        latRan = (Math.random() - 0.5) * 0.0015 * prog;
+                        lonRan = (Math.random() - 0.5) * 0.0015 * prog;
+                    }
+
+                    switch (mode) {
+                        case 0:
+                            newLat = (double) temp + latRan;
+                            break;// ZipCode (0-3.75km)
+                        case 1:
+                            newLat = (double) temp + (Math.random() - 0.5) * 0.3 * prog;
+                            break;//Random (0-750km)
+                        case 2:
+                            newLat = (double) temp + 0.1 * prog;
+                            break;//Shifted (0-300Km)
+                        default:
+                            newLat = (double) temp + (Math.random() - 0.5) * 0.0015 * prog;
+                    }
+
+                    param.setResult(newLat);
+
                 }
             });
 
             XposedHelpers.findAndHookMethod("android.location.Location", lpparam.classLoader, "getLongitude", new XC_MethodHook(){
                 @Override
                 protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                    param.setResult(-122.1433274);
+                    Object temp = param.getResult();
+                    double newLON = 0.0;
+
+                    switch (mode) {
+                        case 0:
+                            newLON = (double) temp + latRan;
+                            break;// ZipCode (0-3.75km)
+                        case 1:
+                            newLON = (double) temp + (Math.random() - 0.5) * 0.3 * prog;
+                            break;//Random (0-750km)
+                        case 2:
+                            newLON = (double) temp + 0.1 * prog;
+                            break;//Shifted (0-300Km)
+                        default:
+                            newLON = (double) temp + (Math.random() - 0.5) * 0.0015 * prog;
+                    }
+                    param.setResult(newLON);
+
                 }
             });
         }
