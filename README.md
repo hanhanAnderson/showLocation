@@ -4,9 +4,21 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/hanhanAnderson/showLocation)
 
 ![screenshot](https://user-images.githubusercontent.com/33920615/55374966-61ae6900-54d8-11e9-9be6-ea612ee2a802.png)
-
+---
 # New Features!
+![Capture](https://user-images.githubusercontent.com/33920615/56628604-71712700-6618-11e9-908f-10271e2dc7b5.PNG)
+![Capture2](https://user-images.githubusercontent.com/33920615/56628605-71712700-6618-11e9-8a02-7b73887cacf8.PNG)
+![Capture3](https://user-images.githubusercontent.com/33920615/56628606-71712700-6618-11e9-8b71-58739aedddd4.PNG)
+![Capture4](https://user-images.githubusercontent.com/33920615/56628607-71712700-6618-11e9-9d9b-75c957cc4ebc.PNG)
+![Capture5](https://user-images.githubusercontent.com/33920615/56628608-71712700-6618-11e9-9679-22c69f2772f4.PNG)
 
+![Capture6](https://user-images.githubusercontent.com/33920615/56628610-71712700-6618-11e9-84e9-b390b1ebe2a8.PNG)
+![Capture6_5](https://user-images.githubusercontent.com/33920615/56628603-71712700-6618-11e9-92fa-0e6f8242be30.PNG)
+![Capture8](https://user-images.githubusercontent.com/33920615/56628601-71712700-6618-11e9-9f38-07dd703bb588.PNG)
+![Capture9](https://user-images.githubusercontent.com/33920615/56628602-71712700-6618-11e9-8d1f-66987bead818.PNG)
+![Capture7](https://user-images.githubusercontent.com/33920615/56628609-71712700-6618-11e9-81c5-0d7ed5df5450.PNG)
+
+---
   - report an obscure location to your apps
 
 Notification when SMS is read
