@@ -5,6 +5,8 @@
 
 ![screenshot](https://user-images.githubusercontent.com/33920615/55374966-61ae6900-54d8-11e9-9be6-ea612ee2a802.png)
 ---
+
+![image](https://user-images.githubusercontent.com/33920615/56665440-0fe0a500-6678-11e9-836a-8637c883bc88.png)
 # New Features!
 ![Capture](https://user-images.githubusercontent.com/33920615/56628604-71712700-6618-11e9-908f-10271e2dc7b5.PNG)
 ![Capture2](https://user-images.githubusercontent.com/33920615/56628605-71712700-6618-11e9-8a02-7b73887cacf8.PNG)
