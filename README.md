@@ -1,12 +1,30 @@
 # showLocation
 # a simple Android Location obfuscator
 
+
+
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/hanhanAnderson/showLocation)
 
 ![screenshot](https://user-images.githubusercontent.com/33920615/55374966-61ae6900-54d8-11e9-9be6-ea612ee2a802.png)
+---
+# Quick Video Demo
+https://drive.google.com/file/d/1gr7mP7omUCAlWbi2sSKo-LMt_9qrro8V/view?usp=sharing
 
+![image](https://user-images.githubusercontent.com/33920615/56665440-0fe0a500-6678-11e9-836a-8637c883bc88.png)
 # New Features!
+![Capture](https://user-images.githubusercontent.com/33920615/56628604-71712700-6618-11e9-908f-10271e2dc7b5.PNG)
+![Capture2](https://user-images.githubusercontent.com/33920615/56628605-71712700-6618-11e9-8a02-7b73887cacf8.PNG)
+![Capture3](https://user-images.githubusercontent.com/33920615/56628606-71712700-6618-11e9-8b71-58739aedddd4.PNG)
+![Capture4](https://user-images.githubusercontent.com/33920615/56628607-71712700-6618-11e9-9d9b-75c957cc4ebc.PNG)
+![Capture5](https://user-images.githubusercontent.com/33920615/56628608-71712700-6618-11e9-9679-22c69f2772f4.PNG)
 
+![Capture6](https://user-images.githubusercontent.com/33920615/56628610-71712700-6618-11e9-84e9-b390b1ebe2a8.PNG)
+![Capture6_5](https://user-images.githubusercontent.com/33920615/56628603-71712700-6618-11e9-92fa-0e6f8242be30.PNG)
+![Capture8](https://user-images.githubusercontent.com/33920615/56628601-71712700-6618-11e9-9f38-07dd703bb588.PNG)
+![Capture9](https://user-images.githubusercontent.com/33920615/56628602-71712700-6618-11e9-8d1f-66987bead818.PNG)
+![Capture7](https://user-images.githubusercontent.com/33920615/56628609-71712700-6618-11e9-81c5-0d7ed5df5450.PNG)
+
+---
   - report an obscure location to your apps
 
 Notification when SMS is read
@@ -49,3 +67,8 @@ App Selection:
 
 Settings:
 ![image](https://user-images.githubusercontent.com/33920615/56371991-25635400-61cc-11e9-9e37-ac0ed1c4d57b.png)
+
+Wireshark packet analysis
+
+![image](https://user-images.githubusercontent.com/33920615/56867472-8a306280-69b3-11e9-9d41-c2ed54851eb7.PNG)
+![image](https://user-images.githubusercontent.com/33920615/56867473-8a306280-69b3-11e9-805b-b4f61aabba4d.PNG)
